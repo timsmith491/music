@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="banner">
+	<%= image_tag("music.jpg", :alt => "NoPicture", :size => "1000x300")%>
+	
+</div>
+<div id="nav">
+	<ul>
+		<li><%= link_to "Songs", songs_path%></li>
+		<li><%= link_to "Artists", artists_path%></li>
+	</ul>
+</div>
+<%= yield %>
+
+</body>
+</html>

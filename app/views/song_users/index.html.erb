@@ -1,0 +1,27 @@
+<h1>Listing song_users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Song</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @song_users.each do |song_user| %>
+      <tr>
+        <td><%= song_user.user_id %></td>
+        <td><%= song_user.song_id %></td>
+        <td><%= link_to 'Show', song_user %></td>
+        <td><%= link_to 'Edit', edit_song_user_path(song_user) %></td>
+        <td><%= link_to 'Destroy', song_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Song user', new_song_user_path %>
